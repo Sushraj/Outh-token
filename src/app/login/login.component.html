@@ -1,0 +1,24 @@
+<div class="col-md-6 offset-md-3 mt-5">
+    <div class="card">
+        <h4 class="card-header">Angular 8 Outh Login Example</h4>
+        <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="onGetToken()">
+                    <div class="form-group">
+                    <Label>
+                        UserName
+                        <input type="text" class="form-control" formControlName="UserName">
+                    </Label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        Password
+                        <input type="password" class="form-control" formControlName="Password">
+                    </label>
+                </div>
+                <div>
+                    <button type="submit" [disabled]="!loginForm.valid"> Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
